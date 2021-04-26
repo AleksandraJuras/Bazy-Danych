@@ -1,0 +1,23 @@
+1. Zależnośći funkcyjne
+id_produktu -> cała reszta
+nazwa_produktu -> VAT, cena_produktu
+suma_brutto, VAT -> suma_netto
+suma_netto, VAT -> suma_brutto
+ilość, suma_brutto, VAT -> nazwa_produktu, cena_produktu
+nazwa_produktu, VAT, ilość, cena_produktu -> suma_brutto, suma_netto
+id_klienta/nazwa_klienta, data_zamowienia -> suma_brutto
+
+2. Klucze kandydujące
+Weług mnie powinna tu byc jesze jedna kolumna id_zamowienia. Sądząc po nazwie atrybutu 
+id_produktu odnosi się do jego nazwy; nazwa jest unikalna co znaczy, że produkt o danej nazwie bedzie
+mieć poprosyu przypisany unikatowy identyfikator. Klienci mogą zamawawiać te same produkty, a więc
+id_produktu jak i ich nazwy bedą się w tabeli powtarzać. Możnaby zmienić id_produktu na id_zamówienia, które 
+dawałoby każdemu zamówieniu unikalny kod, co załatwiłoby sprawę.
+
+3. Zależności funkcyjne i klucze kandydujące
+id_pomieszcenia -> cała reszta
+miasto -> kod_pocztowy
+id_budynku -> ulica, miasto
+id_budynku, numer_pomieszczenia -> powierzchnia, liczba_okien, liczba_drzwi
+
+kluczami kandydującymi mogą być jedynie id_pomieszczenia
